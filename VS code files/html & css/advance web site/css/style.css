@@ -1,0 +1,136 @@
+/* Master styles */
+body{
+    margin: 0px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif 
+}
+.container{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+/* Nav styles */
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 38px;
+}
+.nav-wrapper-left {
+  display: flex;
+}
+.nav-wrapper-right {
+  text-transform: uppercase;
+}
+.nav-wrapper > .nav-wrapper-left > div {
+  font-size: 1.1em;
+  margin-right: 20px;
+}
+.nav-link-wrapper {
+  height: 20px;
+  font-size: 200px;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom 0.5s;
+}
+
+.nav-link-wrapper a {
+  text-decoration: none;
+  color: #8a8a8a;
+  transition: color 0.5s;
+}
+
+.nav-link-wrapper:hover{
+    border-bottom: 1px solid black;
+}
+
+.nav-link-wrapper a:hover{
+    color: black;
+}
+
+/* portfolio styles */
+.portfolio-items-wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.portfolio-item-wrapper{
+    position: relative;
+    border: #8a8a8a solid 2px;
+}
+
+.item-background-img{
+    height: 320px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.img-text-wrapper{
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    padding-left: 100px;
+    padding-right: 100px;
+    /* font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: aqua; */
+}
+.logo-wrapper img{
+width: 50%;
+margin-bottom: 20px;
+
+}
+/* need to be more specific with selector */
+.img-text-wrapper .subtitles{
+  transition:1s ;
+  color: transparent;
+  font-weight: 600;
+}
+
+.img-text-wrapper:hover .subtitles{
+   transition: 1s;
+   font-weight: 600;
+   color: rgb(243, 243, 243);
+   font-style: italic;
+ }
+
+.item-background-img:hover {
+filter: 10%;
+}
+
+ .image-blur{
+   transition: 1s;
+   filter: brightness(10%);
+ }
+
+ /* about style sheet */
+
+ .about-items{
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  
+ }
+
+ .about-photo img{
+  
+  width: 100%;
+  /* background-size: cover; */
+  background-position: center;
+  background-repeat: no-repeat;
+ 
+ }
+ .about-text{
+  padding-left: 10px;
+  padding-right: 0px;
+  color: rgb(86, 116, 17);
+  background-color: blanchedalmond;
+ 
+ }
+
+
+ .active-nav-link{
+   border-bottom: black ;
+ }
+ .active-nav-link a{
+color: black !important;
+ }

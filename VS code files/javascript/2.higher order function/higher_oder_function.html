@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const cars = ['Saab', 'Volvo', 'BMW'];
+      const ages = [31, 11, 52, 63, 36, 26, 16, 44];
+
+      //      foreach
+      //   for (let i = 0; i < ages.length; i++) {
+      //     console.log(ages[i]);
+      //   }
+
+      //   cars.forEach(function (car) {
+      //     console.log(car);
+      //   });
+      //   cars.forEach((car) =>{
+      //     console.log(car);
+      //   });
+      //    filter
+
+      //   const younger = [];
+      //   for (let i = 0; i < ages.length; i++) {
+      //     if (ages[i] < 20) {
+      //       younger.push(ages[i]);
+      //     }
+      //   }
+      //   console.log(younger);
+
+      //   console.log(ages.filter((age) => age < 30));
+      const company = [
+        { id: '1', name: 'sajeewa', grade: 4 },
+        { id: '2', name: 'samadhi', grade: 5 },
+        { id: '3', name: 'geethan', grade: 3 },
+        { id: '4', name: 'geethan', grade: 9 },
+        { id: '5', name: 'geethan', grade: 7 },
+      ];
+
+      //   const Grade4student = company.filter(function (company_pass) {
+      //     if (company_pass.grade == 4) {
+      //       return true;
+      //     }
+      //   });
+
+      //   const Grade4student1 = company.filter(
+      //     (company_pass) => company_pass.grade > 4 && company_pass.grade < 7
+      //   );
+
+      //console.log(Grade4student,Grade4student1);
+      //    map
+      const studentNames = company.map((student) => student.name);
+      //console.log(studentNames); //[ "sajeewa", "samadhi", "geethan", "geethan", "geethan" ]
+
+      //    sort
+      const YoungerToOld = company.sort(function (a, b) {
+        if (a.grade > b.grade) {
+          return 1;
+        } else {
+          return -1;
+        }
+      });
+
+      const YoungerToOld1=company.sort((a,b)=>a>b?1:-1);
+      //console.log(YoungerToOld1);
+
+      const ageSorted=ages.sort((a,b)=>a-b);
+      //console.log(ageSorted);
+
+      //    reduce
+
+const totalAge=ages.reduce(function(total,age){
+    return total+age;
+});
+const totalAge1=ages.reduce((total,age)=>total+age);
+//console.log(totalAge1);
+
+//mix 
+
+const combined=ages.map(age=>age*2).filter(age=>age>40).sort((a,b)=>a-b).reduce((a,b)=>a+b,0);
+console.log(combined);
+
+
+
+
+    </script>
+  </body>
+</html>

@@ -41,6 +41,58 @@
       <img src="img/puppies/2.jpg" />
       <img src="img/puppies/3.jpg" />
     </div>
+    <script>
+      //try addclass() method
+      $(document).ready(function () {
+        $('button').click(function () {
+          $('img').addClass('styleclass');
+        });
+      });
+    </script>
+
+    <style>
+      .styleclass {
+        border: 5px solid rgb(152, 55, 11);
+      }
+    </style>
+
+    <button type="submit">try addClass()</button>
+
+    <br /><br /><br /><br />
+
+    <script>
+      //try $().value() method
+      $(document).ready(function () {
+        $('button').click(function () {
+          alert('value: ' + $('#sometext1').val());
+        });
+      });
+    </script>
+    <script>
+      //try $().hide() method
+      $(document).ready(function () {
+        $('img').click(function () {
+          $(this).hide();
+        });
+      });
+    </script>
+
+    <input type="text" name="" id="sometext1" value="" />
+    <button type="submit">submit</button>
+<h3>try keypress() method</h3>
+<p>start typing...</p>
+<input type="text" name="" id="press" size="10">
+
+<script>
+    //try $().hide() method
+    $(document).ready(function () {
+      $('input').on("keypress",function() {
+        $("p:last").hide();
+      });
+    });
+  </script>
+
+
   </body>
 </html>
 <!-- jquery top methods
@@ -53,5 +105,12 @@ $().text(content)
 $("li:first").text()
 $().html()
 $("img").attr("border","4px solid red") 
+$(document).ready(function())
+$("button").click(function())
+$("#sometext1").val()
+$('img').addClass('styleclass')
+$('img').removeClass('styleclass')
+$('img').toggleClass('styleclass')
+
 
 -->

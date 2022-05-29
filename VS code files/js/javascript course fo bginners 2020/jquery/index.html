@@ -115,7 +115,7 @@
         });
       });
     </script>
-    <button id="flag"> display flag</button>
+    <button id="flag">display flag</button>
     <div id="fade">
       <div
         id="one"
@@ -147,20 +147,48 @@
     </div>
 
     <script>
-        //check fadein() method
-        $(document).ready(function () {
-          $('#flag').click(function () {
-            $('#one').fadeIn();
-          });
-          $('#flag').click(function () {
-            $('#two').fadeIn(2000);
-          });
-          $('#flag').click(function () {
-            $('#three').fadeIn(1000);
-          });
+      //check fadein() method
+      $(document).ready(function () {
+        $('#flag').click(function () {
+          $('#one').fadeIn();
         });
-      </script>
+        $('#flag').click(function () {
+          $('#two').fadeIn(5000);
+        });
+        $('#flag').click(function () {
+          $('#three').fadeIn(3000);
+        });
+      });
+    </script>
+    <button id="slide">slidetoggle check</button>
+    <div
+      id="slidediv"
+      style="background-color: pink; width: 100px; height: 100px; display: none"
+    ></div>
+    <script>
+      //slideToggle() check
+      $(document).ready(function () {
+        $('#slide').click(function () {
+          $('#slidediv').slideToggle(2000);
+        });
+      });
+    </script>
 
+    <style>
+      #drag {
+        height: 70px;
+        width: 50px;
+        background-color: green;
+      }
+    </style>
+
+    <div id="drag"></div>
+    <script>
+      $(function(){
+        $('#drag').draggable();
+      }
+      );
+    </script>
   </body>
 </html>
 <!-- jquery top methods
@@ -186,5 +214,13 @@ $().show()
 $().fadeout()
 $().fadein()
 $().fadetoggle()
+$().slideUp()
+$().slideDown()
+$().slideUP()
+$().slideToggle()
 
+jquery UI>>>>>
+
+draggable() & droppable()
+DatePicker()
 -->

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"
+      integrity="sha256-6XMVI0zB8cRzfZjqKcD01PBsAy3FlDASrlC8SxCpInY="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <h1>jQery tutorial by edureka</h1>
+    <p>this is paragraph</p>
+    <br>
+    <input id="date" type="text" name=""  size="10">
+    <script>
+        $("#date").datepicker();
+    </script>
+    <br><br><br><br><br><br>
+
+    <ul>
+      <li>golden retrrr <a href="http://www.google.com">google</a></li>
+      <li>shaow</li>
+      <li>retriever</li>
+    </ul>
+    <p>differnce between $().text() and $().html() methods are as follows</p>
+    <img src="img/html_text.png" alt="" srcset="" />
+
+    <script>
+      let design = {
+        color: 'blue',
+        background: 'black',
+        border: '3px solid red',
+      };
+      $('h1').css(design);
+    </script>
+    <div class="puppers">
+      <img src="img/puppies/1.jpg" />
+      <img src="img/puppies/2.jpg" />
+      <img src="img/puppies/3.jpg" />
+    </div>
+    <script>
+      //try addclass() method
+      $(document).ready(function () {
+        $('button:first').click(function () {
+          $('img').addClass('styleclass');
+        });
+      });
+    </script>
+
+    <style>
+      .styleclass {
+        border: 5px solid rgb(152, 55, 11);
+      }
+    </style>
+
+    <button type="submit">try addClass()</button>
+
+    <br /><br /><br /><br />
+
+    <script>
+      //try $().value() method
+      $(document).ready(function () {
+        $('button:first').click(function () {
+          alert('value: ' + $('#sometext1').val());
+        });
+      });
+    </script>
+    <script>
+      //try $().hide() method
+      $(document).ready(function () {
+        $('img').click(function () {
+          $(this).hide(5000);
+        });
+      });
+    </script>
+
+    <input type="text" name="" id="sometext1" value="" />
+    <button type="submit">submit</button>
+    <h3>try keypress() method</h3>
+    <p>start typing...</p>
+    <input type="text" name="" id="press" size="10" />
+
+    <script>
+      //try $().on("keypress",function()) method
+
+      $(document).ready(function () {
+        $('input:last').on('keypress', function () {
+          $('p:last').toggle();
+          //   $('p:last').hide();
+        });
+      });
+    </script>
+
+    <h2>try hide() show() methods</h2>
+
+    <button type="submit" id="show">show image <br /></button>
+    <button type="submit" id="hide">hide image <br /></button><br />
+    <button type="submit" id="fadetoggle">fade toggle image <br /></button
+    ><br />
+    <img src="img/puppies/2.jpg" alt="" srcset="" id="123" /><br />
+    <script>
+      //check fadein() method
+      $(document).ready(function () {
+        $('#show').click(function () {
+          $('#123').show(4000);
+        });
+        $('#hide').click(function () {
+          $('#123').hide(2000);
+        });
+        $('#fadetoggle').click(function () {
+          $('#123').fadeToggle(1000);
+        });
+      });
+    </script>
+    <button id="flag">display flag</button>
+    <div id="fade">
+      <div
+        id="one"
+        style="
+          width: 500px;
+          height: 80px;
+          display: none;
+          background-color: green;
+        "
+      ></div>
+      <div
+        id="two"
+        style="
+          width: 500px;
+          height: 80px;
+          display: none;
+          background-color: rgb(176, 176, 176);
+        "
+      ></div>
+      <div
+        id="three"
+        style="
+          width: 500px;
+          height: 80px;
+          display: none;
+          background-color: rgb(228, 90, 20);
+        "
+      ></div>
+    </div>
+
+    <script>
+      //check fadein() method
+      $(document).ready(function () {
+        $('#flag').click(function () {
+          $('#one').fadeIn();
+        });
+        $('#flag').click(function () {
+          $('#two').fadeIn(5000);
+        });
+        $('#flag').click(function () {
+          $('#three').fadeIn(3000);
+        });
+      });
+    </script>
+    <button id="slide">slidetoggle check</button>
+    <div
+      id="slidediv"
+      style="background-color: pink; width: 100px; height: 100px; display: none"
+    ></div>
+    <script>
+      //slideToggle() check
+      $(document).ready(function () {
+        $('#slide').click(function () {
+          $('#slidediv').slideToggle(2000);
+        });
+      });
+    </script>
+
+    <style>
+      #drag {
+        height: 70px;
+        width: 50px;
+        background-color: green;
+      }
+    </style>
+
+    <div id="drag"></div>
+    <script>
+      $(function(){
+        $('#drag').draggable();
+      }
+      );
+    </script>
+<style>
+    #home{
+        width:300px;
+        height:200px;
+        background-color: aquamarine;
+        float:right;
+    }
+</style>
+<img  id="dog" src="img/puppies/3.jpg" alt="" srcset="">
+<div id="home">Home</div>
+<script>//check draggable & droppable
+    $("#dog").draggable();
+    $("#home").droppable();
+</script>
+
+  </body>
+</html>
+<!-- jquery top methods
+$().css("property","property value")
+$("h1").css(relevant variable containing css properties)
+$().before("content to be added")
+$().after()
+$().text()
+$().text(content)
+$("li:first").text()
+$().html()
+$("img").attr("border","4px solid red") 
+$(document).ready(function())
+$("button").click(function())
+$("#sometext1").val()
+$('img').addClass('styleclass')
+$('img').removeClass('styleclass')
+$('img').toggleClass('styleclass')
+ $().on("keypress",function()) 
+$().hide()
+$().toggle()//toggle between hide and show of particular element
+$().show()
+$().fadeout()
+$().fadein()
+$().fadetoggle()
+$().slideUp()
+$().slideDown()
+$().slideUP()
+$().slideToggle()
+
+jquery UI>>>>>
+
+draggable() & droppable()
+DatePicker()
+-->

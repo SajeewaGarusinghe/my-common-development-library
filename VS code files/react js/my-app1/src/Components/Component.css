@@ -1,0 +1,32 @@
+*{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+    padding: 3px;
+    margin: 5px;
+    
+}
+
+.Content {
+    text-align: center;
+    color: blue;
+    background-color: blanchedalmond;
+    width: 50%;
+    height: 60px;
+    font-style: bold;
+    border: 2px solid red;
+    
+}
+.TopicBox {
+    text-align: center;
+    color: black;
+    background-color: rgb(119, 197, 138);
+    width: 50%;
+    height: 80px;
+    font-size: large;
+    border: 2px solid rgb(38, 0, 255);
+    }
+
+    .Header{
+        text-align: center;
+    color: black;
+    background-color: rgb(157, 203, 169);
+    }

@@ -12,6 +12,7 @@ class Component1 extends Component {
       return (
           <div >
         <h2>This is component 1</h2>
+        
         {this.state.counter}
         <input type="button" value={'submit'} onClick={'this.submit'}></input>
       </div>

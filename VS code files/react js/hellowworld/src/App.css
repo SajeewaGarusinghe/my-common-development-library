@@ -1,6 +1,47 @@
-.App {
+.Container {
   text-align: center;
+  color: green;
+  margin: 5%;
+  border: 2px solid red;
+  padding: 2px;
+  background-color: yellowgreen;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*>>>>>>>>>>>>>>>>> My codes end here <<<<<<<<<<<<<<<<*/
 
 .App-logo {
   height: 40vmin;
@@ -36,3 +77,4 @@
     transform: rotate(360deg);
   }
 }
+    

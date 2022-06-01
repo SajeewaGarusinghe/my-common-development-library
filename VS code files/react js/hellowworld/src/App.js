@@ -1,10 +1,12 @@
 // import logo from './logo.svg';
 import './App.css';
-
+import Header from './com/Header';
 function App() {
   return (
-    <div className="App">
-     <h1>Hellow world</h1>
+    <div className="Container">
+     
+     <Header id='34'/>
+     
     </div>
   );
 }

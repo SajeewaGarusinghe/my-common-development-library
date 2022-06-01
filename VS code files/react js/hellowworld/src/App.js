@@ -1,14 +1,12 @@
 // import logo from './logo.svg';
 import './App.css';
-
+import Header from './com/Header';
 function App() {
-const name='sajeewa';
-const x=100;
-
   return (
     <div className="Container">
-     <h1>Hellow {name}</h1>
-     <h2>Hellow{x<10 ? 'yes':'no'} </h2>
+     
+     <Header id='34'/>
+     
     </div>
   );
 }

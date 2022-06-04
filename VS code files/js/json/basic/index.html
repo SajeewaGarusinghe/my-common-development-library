@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JSON tutorial</title>
+  </head>
+  <body>
+    <h1>JSON tutorial</h1>
+    <p id="text">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi illum
+      dicta nam asperiores commodi soluta minus enim ipsum impedit cum maxime
+      id, delectus consectetur et voluptatem facere! Aut, nihil architecto!
+    </p>
+
+    <script>
+      let jasonText =
+        '{"name":"John stuart", "birth":"1986-12-14", "city":"New York"}';
+
+      let received = JSON.parse(jasonText);
+      let myText = document.getElementById('text');
+      myText.innerHTML = 'my name is : ' + received.name;
+
+      const text1 = '[ "Ford", "BMW", "Audi", "Fiat" ]'; //parsing an jason array
+      const myArr = JSON.parse(text1);
+      console.log(myArr);
+
+      let a = { name: 'sajeewa', age: 27 };
+      console.log(JSON.stringify(a));
+    </script>
+
+    <p id="date"></p>
+
+    <script>
+      const text = '{"name":"John", "birth":"1986-12-14", "city":"New York"}';
+      const obj = JSON.parse(text);
+      obj.birth = new Date(obj.birth);
+      console.log(obj.birth);
+      let b = `* Date objects are not allowed in JSON. If you need to include a
+       date, write it as a string. You can convert it back into a 
+       date object later as follows`;
+
+      document.getElementById('date').innerHTML =
+        b + '<br>>>>>>>>>>>>>>>>>><br>' + obj.birth;
+    </script>
+    <p>
+      * Parsing Functions>>>> Functions are not allowed in JSON.If you need to
+      include a function, write it as a string.You can convert it back into a
+      function later:
+    </p>
+    <p id="func"></p>
+    <script>
+      const text2 =
+        '{"name":"John", "age":"function() {return 30;}", "city":"New York"}';
+      const obj2 = JSON.parse(text2);
+      obj2.age = eval('(' + obj2.age + ')'); //The eval() method evaluates or executes an argument.
+
+      // Do NOT use eval()
+      // Executing JavaScript from a string is an BIG security risk.
+      // With eval(), malicious code can run inside your application without permission.
+      // With eval(), third-party code can see the scope of your application, which can lead to possible attacks.
+
+      document.getElementById('func').innerHTML = obj2.name + ', ' + obj2.age();
+    </script>
+    <p>
+      * Stringify Functions In JSON, functions are not allowed as object values.
+      The JSON.stringify() function will remove any functions from a JavaScript
+      object, both the key and the value:
+    </p>
+    <p id="func1"></p>
+    <p>
+      *This can be omitted if you convert your functions into strings before
+      running the JSON.stringify() function.
+    </p>
+    <p id="func2"></p>
+    <script>
+      const obj3 = {
+        name: 'John',
+        age: function () {
+          return 30;
+        },
+        city: 'New York',
+      };
+      const myJSON = JSON.stringify(obj3);
+      document.getElementById('func1').innerHTML = myJSON;
+
+      obj3.age = obj3.age.toString();
+      const myJSON1 = JSON.stringify(obj3);
+      document.getElementById('func2').innerHTML = myJSON1;
+    </script>
+    <img src="/json/basic/string.png" alt="" srcset="" />
+    <p>
+      It is a common mistake to call a JSON object literal "a JSON object". JSON
+      cannot be an object. JSON is a string format.The data is only JSON when it
+      is in a string format. When it is converted to a JavaScript variable, it
+      becomes a JavaScript object.
+    </p>
+
+    <h2>You can loop through object properties with a for-in loop:</h2>
+    <p id="demo"></p>
+    <script>
+      const myJSON2 = '{"name":"John", "age":30, "car":null}';
+      const myObj = JSON.parse(myJSON2);
+
+      let text3 = '';
+      let text4 = '';
+      for (const x in myObj) {//for-in loop
+        text3 += x + ', ';
+        text4 += myObj[x] + ', ';
+      }
+      document.getElementById('demo').innerHTML =
+        'keys are >>> ' + text3 + ' >>>>values are >>> ' + text4;
+    </script>
+  </body>
+</html>

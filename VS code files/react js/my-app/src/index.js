@@ -7,7 +7,7 @@ import Button from '@mui/material/Button';
 //import {Button,Spinner}  from 'react-bootstrap/Button';
 
 // or less ideally
-import 'bootstrap/dist/css/bootstrap.min.css';
+//import 'bootstrap/dist/css/bootstrap.min.css';
 //import {Button,Spinner}  from 'react-bootstrap';
 
 {/* The following line can be included in your src/index.js or App.js file*/}
@@ -26,9 +26,9 @@ root.render(
 </Spinner>
     <Button>Submit</Button> */}
 {/* material UI */}
-<Button variant="text">Text</Button>
+{/* <Button variant="text">Text</Button>
 <Button variant="contained">Contained</Button>
-<Button variant="outlined">Outlined</Button>
+<Button variant="outlined">Outlined</Button> */}
 
   </React.StrictMode>
 );

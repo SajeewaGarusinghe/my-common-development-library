@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(
+        //thi script runs only when document fully loaded.otherwise it wont work
+        () => {
+          $('#btn1').click(() => {
+            alert('button clicked');
+          });
+        }
+      );
+    </script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>jquery crash course</h1>
+    </header>
+    <div id="container">
+      <h3>Mouse events</h3>
+
+      <button id="btn1">Button 1</button>
+      <button id="btn2">Button 2</button>
+      <button id="btn3">toggle</button>
+      <p class="para1">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint eos
+        voluptates, commodi mollitia, non unde aut, repellendus dolorum
+        repudiandae delectus doloribus modi! Eligendi eius provident ullam
+        asperiores, saepe doloremque molestias?
+      </p>
+
+      <script>
+        $(document).ready(
+          //thi script runs only when document fully loaded.otherwise it wont work
+          () => {
+            //   $('#btn2').on('click', () => {
+            //     alert('button 2 clicked');
+            //   });
+            $('#btn2').on('click', () => {
+              $('.para1').css('color', 'green');
+            });
+            $('#btn3').on('click', () => {
+              $('.para1').toggle();
+            });
+          }
+        );
+      </script>
+      <p class="para2">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic quia quod,
+        commodi suscipit voluptatem sed eius doloremque, est consectetur ea
+        delectus minus harum repellendus iusto dicta necessitatibus non at
+        sequi.
+      </p>
+      <button id="btn4">hide para 2</button>
+      <h2 id="code">coordinates live</h2>
+      <script>
+        $('#btn4').on('mouseleave', () => {
+          //mousemove.mouseenter,mouseup,mousedown
+          $('.para2').toggle();
+        });
+        $('#btn4').click((e) => {
+          console.log(e);
+        });
+        // $(document).on('mousemove', (e) => {
+        //   $('code').html( 'x:' + e.clientX + '<br><br>' + 'y:' + e.clientY)
+
+        // });
+        $(document).on('mousemove',(e)=>{
+            $('#code').html(`x: ${e.clientX} and y: ${e.clientY}`);//note what html() method do
+        })
+      </script>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>jquery crash course</h1>
+    </header>
+    <div id="container">
+      <hr />
+      <form action="">
+        <label>Name</label><br />
+        <input type="text" name="name" id="name" /><br />
+        <label>Email</label><br />
+        <input type="text" name="email" id="email" /><br />
+        <label for="">Gender</label><br />
+        <select name="gender" id="gender" style="width: 140px">
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
+        <br /><br />
+        <input type="submit" value="submit" />
+      </form>
+      <hr />
+    </div>
+    <script>
+      $('input').focus(() => {
+        $('input').css('background', 'pink');
+      });
+      $('input').blur(() => {
+        $('input').css('background', 'white');
+      });
+      $('input').keyup((e) => {
+        console.log(e.target.value);
+      });
+      $('select#gender').change((e) => {
+        console.log(e.target.value);
+      });
+      
+    </script>
+  </body>
+</html>

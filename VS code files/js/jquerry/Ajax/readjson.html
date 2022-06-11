@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>jquery crash course</h1>
+    </header>
+    <div id="container">
+      <ul id="users"></ul>
+      <button id="btn">Show 100 posts</button>
+      <button id="btn1">hide 100 posts</button>
+      <div id="postDiv"></div>
+    </div>
+
+    <script>
+      $(document).ready(() => {
+        $.getJSON('users.json', (data) => {
+          $.each(data, (i, user) => {
+            $('ul#users').append(
+              `<li>${user.username}.........>>.......${user.company['catchPhrase']}</li>`
+            );
+          });
+        });
+
+        $('#btn').click(() => {
+          $('#postDiv').show();
+          $.ajax({
+            method: 'GET',
+            url: 'https://jsonplaceholder.typicode.com/posts',
+            dataType: 'json',
+          }).done((data) => {
+            $.map(data, (post, i) => {
+              $('#postDiv').append(`<h3>${post.title}</h3><p>${post.body}</p>`);
+            });
+          });
+        });
+        $('#btn1').click(() => {
+          $('#postDiv').hide();
+        });
+      });
+    </script>
+  </body>
+</html>

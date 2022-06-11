@@ -13,12 +13,54 @@
       <h1>jquery crash course</h1>
     </header>
 
-
     <div id="container">
-
-
-        
+      <a id="google" href="http://google.com">google</a><br /><br /><br /><br /><br />
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam
+        temporibus culpa velit adipisci eius et, debitis repellendus in quae
+        laboriosam voluptatum ducimus numquam, vero eum doloremque quaerat
+        saepe, iusto nobis. Lorem ipsum dolor sit amet, consectetur adipisicing
+        elit. Rerum magnam repellendus dolorem quidem repudiandae, consequatur
+        ipsum dolor reiciendis voluptatem. Vitae distinctio itaque praesentium?
+        Voluptatibus tempora dolorem minima nobis ratione perferendis. Lorem
+        ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam temporibus
+        culpa velit adipisci eius et, debitis repellendus in quae laboriosam
+        voluptatum ducimus numquam, vero eum doloremque quaerat saepe, iusto
+        nobis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum
+        magnam repellendus dolorem quidem repudiandae, consequatur ipsum dolor
+        reiciendis voluptatem. Vitae distinctio itaque praesentium? Voluptatibus
+        tempora dolorem minima nobis ratione perferendis.
+      </p>
+      <p id="p2">this is how paragraph but wrap inside h3 tag looks like</p>
     </div>
-    <script></script>
+    <script>
+      $('a').attr('target', '_blank'); //open the link in new window
+      //  $('a').removeAttr('target'); //remove target attribute
+      $('#p2').wrap('<h2>');
+      setTimeout(() => {
+        $('p').wrapAll('<h3>');
+      }, 4000);
+    </script>
+    <ul>
+      <li class="items">item 1</li>
+      <li class="items">item 2</li>
+      <li class="items">item 3</li>
+      <li class="items">item 4</li>
+    </ul>
+    <script>
+      let newArr = $('.items').toArray();
+      $.each(newArr, (index, val) => {
+        setTimeout(() => {
+          console.log(newArr[index]);
+        }, 4000);
+      });
+    </script>
+    <footer>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="DOM_manipulation.html">DOM Manipulation</a></li>
+        <li><a href="form.html">Form</a></li>
+      </ul>
+    </footer>
   </body>
 </html>

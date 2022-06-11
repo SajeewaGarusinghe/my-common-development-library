@@ -16,3 +16,12 @@ header{
     margin: auto;
     padding: 10px;
 }
+.box{
+    height: 100px;
+    width:100px;
+    background-color: aqua;
+    position: relative;
+}
+button{
+    padding: 20px;
+}

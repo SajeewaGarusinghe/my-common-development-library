@@ -1,0 +1,26 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-size: 40px;
+}
+
+.box-one{
+    background-color: #eb5757;
+    border:4px dotted #9b51e0;
+    padding:20px;
+    margin:40px;
+    width:400px;;
+    box-sizing: border-box;
+}
+
+.box-two{
+    background-color: #616fda;
+    border:0 solid #29ce89;
+    margin:20px;
+    width:600px;
+    height:100px
+}
+
+body{
+    
+}

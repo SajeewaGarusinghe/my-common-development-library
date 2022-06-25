@@ -1,0 +1,42 @@
+body{
+    background-color: rgb(48, 14, 14);
+}
+.container{
+    box-sizing: border-box;
+    border: 2px solid black;
+    width: 20rem;
+    height: auto;
+    padding: 15px;
+    background-color: rgb(225, 233, 238);
+    border-radius: 1rem;
+    max-height: 25rem;
+    overflow: auto;
+    margin: .6rem;
+}
+.content{
+  
+}
+
+.btn {
+    display: inline-block;
+    background: rgb(96, 92, 92);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 15px;
+  
+  }
+  .btn:hover{
+    background: rgb(189, 181, 181);
+  }
+
+.output{
+    padding: 2rem;
+    background-color:rgb(146, 215, 177) ;
+    border-radius: .5rem;
+    
+}
